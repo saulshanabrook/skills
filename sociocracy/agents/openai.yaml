@@ -1,4 +1,4 @@
 interface:
   display_name: "Sociocracy"
-  short_description: "Steward sub-agent circles and governance"
-  default_prompt: "Use $sociocracy to steward this long-running task with focused sub-agent circles, clear domains, governance feedback, review loops, and stop rules."
+  short_description: "Coordinate long-running work with bounded agents"
+  default_prompt: "Use $sociocracy to coordinate this long-running task with a clear mission, bounded sub-agent domains, evidence handoffs, review loops, and stop rules."
