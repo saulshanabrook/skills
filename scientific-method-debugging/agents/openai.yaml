@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Method Debugging"
+  short_description: "Falsifiable debugging loop"
+  default_prompt: "Use $scientific-method-debugging to investigate this bug with observation, competing hypotheses, falsifiable probes, and regression-checked fixes."

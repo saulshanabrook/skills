@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Diff Reduction"
+  short_description: "Shrink diffs for easier review"
+  default_prompt: "Use $review-diff-reduction to reduce this diff without changing behavior so it is easier to review."

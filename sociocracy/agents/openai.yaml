@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sociocracy"
+  short_description: "Coordinate focused sub-agent circles"
+  default_prompt: "Use $sociocracy to coordinate this long-running task with focused sub-agent circles, clear domains, review loops, and stop rules."

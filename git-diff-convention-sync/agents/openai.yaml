@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Diff Convention Sync"
+  short_description: "Infer conventions from a git diff and propagate them into docs or agent.md"
+  default_prompt: "Look at my recent git diff, infer any durable best-practice convention it implies, and update the most relevant docs file or agent.md."

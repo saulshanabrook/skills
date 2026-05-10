@@ -1,0 +1,7 @@
+interface:
+  display_name: "GitHub Actions Logs"
+  short_description: "Fetch raw Actions logs with REST"
+  default_prompt: "Use $github-actions-rest-logs to inspect the latest failing GitHub Actions run with GITHUB_PAT_TOKEN."
+
+policy:
+  allow_implicit_invocation: true
