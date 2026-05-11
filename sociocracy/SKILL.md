@@ -22,14 +22,14 @@ If the mission or domain is too unclear to bound work, ask the user or do a shor
 
 ## When To Spawn
 
-Spawn only when a focused circle reduces context pressure, improves review quality, or enables useful parallel work. Prefer read-only `explorer` agents before workers during planning/debugging. Treat circles as local working circles: start lightweight with explicit aim, domain, authority, and stop/review terms; keep one long-running only when recurring ownership, durable state, and clear handoffs reduce net coordination cost.
+Spawn only when a focused circle reduces context pressure, improves review quality, or enables useful parallel work. Prefer read-only `explorer` agents before workers during planning/debugging. Start circles lightweight with explicit aim, domain, authority, and stop/review terms. For adjacent implementation work in the same domain (overlapping write set, shared acceptance criteria, or tightly coupled code path; repo alone is not enough), reuse one worker by updating its aim, evidence, and stop condition.
 
 Common circles:
 
 - `context`: repo archaeology, prior art, docs, papers, logs, or web research.
-- `implementation`: bounded patch, experiment, or artifact stream. Keep small linear work in main; use workers for long-running, multi-agent, restart-sensitive, or user-requested coordinator-only streams.
+- `implementation`: bounded patch, experiment, or artifact stream. Keep small linear work in main; use one worker for long-running, restart-sensitive, or user-requested coordinator-only implementation streams. Use additional workers only for disjoint ownership, non-overlapping write sets, separate acceptance criteria, and coordinator-owned integration checkpoints. Use explorer/review agents for independent sidecar research or review.
 - `review`: criteria-based evaluation after a draft or patch exists.
-- `mission`: at most one steward for vision, mission, non-goals, values, and success criteria. It may raise objections; it does not manage implementation or route context. The main thread is the general coordination circle and owns integration, sequencing, user communication, and context routing.
+- `mission`: optional, at most one steward for vision, mission, non-goals, values, and success criteria. It may raise mission/aim objections, but does not assign work, manage implementation, or route context; the main thread coordinates, integrates, sequences, and talks to the user.
 - `governance`: process, role clarity, lifecycle, or skill/workflow changes.
 
 Do not spawn agents for immediate critical-path work, generic "review everything" passes, or coordinator decision avoidance.
@@ -40,7 +40,7 @@ Use `reasoning_effort: "xhigh"` for `default`, `explorer`, and `worker` agents w
 
 Brief each agent with: circle/domain, aim, inputs/evidence, expected output, stop condition, out-of-scope items, edit permission, and owned write set. Require evidence-bearing findings: paths, commands, risks, recommendations, and open questions.
 
-Workers also need: no overlapping write sets; do not revert others' edits; adapt to concurrent changes. Keep implementation in the main thread only for linear, small/medium, tightly coupled, or immediate critical-path work. Use a worker implementation circle for a disjoint bounded stream with acceptance criteria and verification commands, or for restartable handoff-worthy context. Coordinator-run diff inspection, smoke tests, staging/reverting worker-owned changes, and final verification are integration duties; if they become open-ended debugging or code editing, brief or redirect a worker. For research/experiments, include the hypothesis and early-stop gate; if absent, preserve baseline facts and stop.
+Workers also need: owned write set, acceptance criteria, verification commands, and instructions to adapt to concurrent changes without reverting others' edits. Keep implementation in main for linear, small/medium, tightly coupled, or immediate critical-path work. Within its owned write set and acceptance criteria, the worker owns local implementation choices; the coordinator owns integration: diff inspection, smoke tests, staging attributed worker-owned changes, asking before discarding changes, and final verification. Before starting another same-domain worker, update/redirect the existing one; replace it only after it completes, goes stale, is blocked with blocker/evidence captured, or has been distilled into the shared artifact. For research/experiments, include the hypothesis and early-stop gate; if absent, preserve baseline facts and stop.
 
 ## Roster
 
@@ -48,7 +48,7 @@ Keep a small visible roster when more than one agent is active:
 
 `agent | circle/domain | aim | status | expected output | stop condition`
 
-For repo work with multiple active agents, put or update this roster in the repo status artifact before the first implementation worker starts. The coordinator owns the shared roster; workers update their own evidence/status only when asked. Update it when an agent completes, blocks, goes stale, or changes scope. Close agents that are no longer needed after extracting the useful evidence.
+For repo work that must survive resume, or when multiple workers will remain active beyond the current turn, put or update this roster in the repo status artifact before the first implementation worker starts; for one short worker, visible plan/chat is enough. The coordinator owns shared roster assignment/status/removal; agents update only their assigned evidence/status note or section unless explicitly delegated for a named field, artifact, and scope. Treat roster rows as current coordination contracts, not result ledgers or permanent history: keep `aim`, `expected output`, and `stop condition` as assignment fields. Put completed recommendations, consent outcomes, objections, decisions, and findings in dated result/decision/evidence sections or agent notes; retain completed rows only while useful for handoff, blocker visibility, or reopen routing. If an agent name is reused or its remit changes materially, make current authority explicit with a stable agent ID, dated assignment, or fresh row so old consent does not imply current authority.
 
 ## State Artifacts
 
@@ -58,7 +58,7 @@ Use the lowest durable surface that allows resume without replaying chat:
 - Repo work: existing `STATUS.md`, `findings/*.md`, design note, issue/PR text, meeting note, or task handoff.
 - Long-running work with no artifact: create one task-local handoff only if future pickup is likely.
 
-Store distilled state only: mission/aim/domain, roster, provisional decisions/review terms, objections/checks, agent findings, evidence paths, commands, acceptance criteria, next steps, and stop rules. Do not store full transcripts unless asked.
+Store distilled state only: mission/aim/domain, provisional decisions/review terms, objections/checks, agent findings, evidence paths, commands, acceptance criteria, next steps, and stop rules. Do not store full transcripts unless asked. Summarize completed-agent findings into dated notes, decision logs, or the relevant evidence section.
 
 Create per-agent notes only for long-running, restart-sensitive, or independently useful work; otherwise synthesize into the shared artifact. Suggested path: `findings/<date>-<slug>/agents/<agent-slug>.md`. Suggested fields: mission, domain, aim, authority, status, started, updated; sections: Current State, Findings, Evidence, Decisions/Recommendations, Risks/Objections, Next Step/Stop Condition.
 
@@ -69,7 +69,7 @@ Create per-agent notes only for long-running, restart-sensitive, or independentl
 - Keep decisions with the most specific owning circle; wider input is feedback, not a vote.
 - Handoffs/plans must include evidence paths, blockers, commands, acceptance criteria, non-goals, and the first PR or vertical slice.
 - When using local Codex history, start from `MEMORY.md` and targeted rollout summaries. Avoid broad session-log searches unless exact evidence is needed.
-- For plans/process changes, treat concrete mission/aim/domain/evidence/safety/review-cost objections as scope, check, or routing changes; record preferences as feedback.
+- When a nontrivial task has no workable plan/proposal and the coordinator does not yet know how to proceed, default to lightweight proposal forming before committing to a path or conclusion; skip it when the next step, owner, and acceptance criteria are already clear enough for straightforward execution or a narrow fix. State the context/need and owning domain; list decision dimensions as questions/considerations, not solutions; gather proposal pieces as possible answer statements, including partial or conflicting pieces; synthesize one proposed path with tradeoffs, omitted pieces, checks, next slice, and review term if useful. Consent-check for concrete aim/domain/evidence/safety/coordination-cost/acceptance objections. Integrate objections by changing content, scope/sequence, term/duration, measurement/reporting/review, or routing. Record preferences as feedback; send unresolved user/product calls to the user.
 
 ## Review Loops
 
