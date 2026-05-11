@@ -27,7 +27,7 @@ Spawn only when a focused circle reduces context pressure, improves review quali
 Common circles:
 
 - `context`: repo archaeology, prior art, docs, papers, logs, or web research.
-- `implementation`: bounded patch, experiment, or artifact stream; usually handled by the main thread unless a worker has a bounded parallel or handoff-worthy stream.
+- `implementation`: bounded patch, experiment, or artifact stream. Keep small linear work in main; use workers for long-running, multi-agent, restart-sensitive, or user-requested coordinator-only streams.
 - `review`: criteria-based evaluation after a draft or patch exists.
 - `mission`: at most one steward for vision, mission, non-goals, values, and success criteria. It may raise objections; it does not manage implementation or route context. The main thread is the general coordination circle and owns integration, sequencing, user communication, and context routing.
 - `governance`: process, role clarity, lifecycle, or skill/workflow changes.
@@ -40,7 +40,7 @@ Use `reasoning_effort: "xhigh"` for `default`, `explorer`, and `worker` agents w
 
 Brief each agent with: circle/domain, aim, inputs/evidence, expected output, stop condition, out-of-scope items, edit permission, and owned write set. Require evidence-bearing findings: paths, commands, risks, recommendations, and open questions.
 
-Workers also need: no overlapping write sets; do not revert others' edits; adapt to concurrent changes. Keep implementation in the main thread for linear, small/medium, tightly coupled, or critical-path work. Use a worker implementation circle only for a disjoint bounded stream with acceptance criteria and verification commands, or for restartable handoff-worthy context. For research/experiments, include the hypothesis and early-stop gate; if absent, preserve baseline facts and stop.
+Workers also need: no overlapping write sets; do not revert others' edits; adapt to concurrent changes. Keep implementation in the main thread only for linear, small/medium, tightly coupled, or immediate critical-path work. Use a worker implementation circle for a disjoint bounded stream with acceptance criteria and verification commands, or for restartable handoff-worthy context. Coordinator-run diff inspection, smoke tests, staging/reverting worker-owned changes, and final verification are integration duties; if they become open-ended debugging or code editing, brief or redirect a worker. For research/experiments, include the hypothesis and early-stop gate; if absent, preserve baseline facts and stop.
 
 ## Roster
 
@@ -48,7 +48,7 @@ Keep a small visible roster when more than one agent is active:
 
 `agent | circle/domain | aim | status | expected output | stop condition`
 
-Update it when an agent completes, blocks, goes stale, or changes scope. Close agents that are no longer needed after extracting the useful evidence.
+For repo work with multiple active agents, put or update this roster in the repo status artifact before the first implementation worker starts. The coordinator owns the shared roster; workers update their own evidence/status only when asked. Update it when an agent completes, blocks, goes stale, or changes scope. Close agents that are no longer needed after extracting the useful evidence.
 
 ## State Artifacts
 
