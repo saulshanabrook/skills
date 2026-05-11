@@ -90,5 +90,7 @@ Stop spawning or continuing agents when:
 
 Use these only for theory-grounded process design or unresolved governance questions. Search targeted terms; do not load whole books or quote long passages.
 
-- `/Users/saul/Documents/who-decides-who-decides.txt`: aims, domains, consent, objections, feedback, circle formation.
-- `/Users/saul/Documents/many-voices-one-song.txt`: circle definitions, linking, feedback loops, governance pitfalls, too-many-circles failure modes.
+These books are Creative Commons source material, not public domain. Prefer paraphrase or brief excerpts. For substantial copied/adapted text outside private working notes, include title, authors, SoFA/publisher, license link, and change note; respect attribution and ShareAlike, and verify the exact license before publication. `Many Voices One Song` states CC BY-SA 3.0. `Who Decides Who Decides?` locally states Attribution-ShareAlike Non-commercial 3.0 but links to CC BY-SA 3.0; treat substantial reuse conservatively as NonCommercial + ShareAlike until verified.
+
+- `/Users/saul/Documents/who-decides-who-decides.txt`: Ted J. Rau, aims, domains, consent, objections, feedback, circle formation.
+- `/Users/saul/Documents/many-voices-one-song.txt`: Ted J. Rau and Jerry Koch-Gonzalez, circle definitions, linking, feedback loops, governance pitfalls, too-many-circles failure modes.
