@@ -24,7 +24,7 @@ For long-running, multi-agent, restart-sensitive, or drifting work, use the `Ste
 
 ## When To Spawn
 
-Spawn only when a focused circle reduces context pressure, improves review quality, or enables useful parallel work. Prefer read-only `explorer` agents before workers during planning/debugging. Start circles lightweight with explicit aim, domain, authority, and stop/review terms. For adjacent implementation work in the same domain (overlapping write set, shared acceptance criteria, or tightly coupled code path; repo alone is not enough), reuse one worker by updating its aim, evidence, and stop condition.
+Spawn only when a focused circle reduces context pressure, improves review quality, or enables useful parallel work. Prefer read-only `explorer` agents before workers during planning/debugging. Start circles lightweight with explicit aim, domain, authority, and stop/review terms. Before spawning multiple research circles, split evidence surfaces or name one owner for shared scans/commands; make overlapping circles interpretation/review-only when they need the same evidence. For adjacent implementation work in the same domain (overlapping write set, shared acceptance criteria, or tightly coupled code path; repo alone is not enough), reuse one worker by updating its aim, evidence, and stop condition.
 
 Common circles:
 
@@ -40,7 +40,7 @@ Use `reasoning_effort: "xhigh"` for `default`, `explorer`, and `worker` agents w
 
 ## Agent Brief
 
-Brief each agent with: circle/domain, aim, inputs/evidence, expected output, stop condition, out-of-scope items, edit permission, and owned write set. Require evidence-bearing findings: paths, commands, risks, recommendations, and open questions.
+Brief each agent with: circle/domain, aim, inputs/evidence, expected output, stop condition, out-of-scope items, edit permission, owned write set, and for research agents the owned evidence surface plus command authority (`owned`, `request-only`, or `final-gate` for broad/slow checks). Require evidence-bearing findings: paths, exact commands/cwd, result and freshness/source type, gaps/rerun need, risks, recommendations, and open questions.
 
 Workers also need the progress contract from `Steering Gates`. Keep implementation in main for linear, small/medium, tightly coupled, or immediate critical-path work. Within its owned write set and acceptance criteria, the worker owns local implementation choices; the coordinator owns integration, final verification, and shared-state updates. For research/experiments, include the hypothesis and early-stop gate; if absent, preserve baseline facts and stop.
 
@@ -83,6 +83,8 @@ Keep commit messages repo-appropriate and terse: include scope, rationale, check
 - Keep decisions with the most specific owning circle; wider input is feedback, not a vote.
 - Handoffs/plans must include evidence paths, blockers, commands, acceptance criteria, non-goals, and the first PR or vertical slice.
 - When using local Codex history, start from `MEMORY.md` and targeted rollout summaries. Avoid broad session-log searches unless exact evidence is needed.
+- After delegating discovery, the coordinator defaults to synthesis, routing, cheap orientation, and final integration; agent-owned domains include first-pass scans and evidence commands. Keep cheap orientation smaller than repo archaeology or domain discovery.
+- Broad, slow, shared, or scoreboard-defining commands have one owner at a time. Coordinator reruns or takes over overlapping evidence only when the result is missing, stale, suspect, failed/interrupted, checkout-changed, owner retired/redirected, or the command is an explicit final gate; record the exception and tell affected circles what to reuse or stop.
 - Coordinator integration includes synthesis, diff inspection, verification, narrow repair, and shared-state updates. In long-running, restart-sensitive, delegated, or contested work, after discovery/proposal the coordinator defaults to coordination-only; implementation authority moves to the implementation circle that owns the aim, domain, write set, acceptance checks, and stop condition. If the coordinator keeps or takes a local implementation slice, record it as a bounded exception with owned files, aim, stop condition, checks, and whether affected circles or the user need consent.
 - When a nontrivial task lacks a workable path, owner, or acceptance criteria, use multi-agent proposal forming before committing; skip it for straightforward execution or a narrow fix. Default form is coordinator plus one bounded proposal-piece explorer/reviewer, plus active agents whose domains are affected. Add agents only for genuinely independent, contested, high-risk, or affected-domain dimensions; do not simulate consensus.
 - Use `Understand -> Explore -> Decide` in discrete rounds. Understand: record context, need, domain, facts/constraints, decision, and dimensions as questions; move on only when there are no open context questions or dimension additions. Explore: gather proposal pieces from those dimensions; pieces may conflict, and the move-on check is only whether more pieces are needed. Decide: synthesize one path with evidence, owner/write set, acceptance checks, next slice, stop/review term, and unresolved objections. Consent-check only the synthesized proposal for concrete aim/domain/evidence/safety/coordination-cost/ownership/acceptance/durability objections; integrate by changing content, scope/sequence, term, measurement/reporting/review, or routing. Coordinator plus affected active circles have process consent rights; others provide feedback unless explicitly seated.
@@ -127,6 +129,7 @@ Stop spawning or continuing agents when:
 - Evidence shows the planned path will not answer the user's question.
 - Two independent checks invalidate the approach.
 - The next step needs user approval, credentials, destructive action, or a product decision.
+- Active circles are running duplicate discovery/verification or overlapping evidence surfaces are creating more coordination cost than progress.
 - Parallelism is creating more coordination work than progress.
 
 ## References
