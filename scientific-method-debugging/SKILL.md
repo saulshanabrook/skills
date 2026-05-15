@@ -89,24 +89,6 @@ When a process evolves over time, observe it at stable boundaries instead of onl
   - more duplicate presentations of the same underlying opportunity
 - Prefer one bounded stepwise trace over many full end-to-end runs when chasing divergence.
 
-## Counts vs Examples
-
-Counts are for localization, not proof.
-
-- Use counts to find the first step or family that diverges.
-- Then switch to exact witnesses:
-  - one matched candidate
-  - one state member or record
-  - one parent or predecessor object
-  - one triggering tuple, event, or transition
-- If a count gap survives normalization, inspect concrete examples from that gap before claiming a cause.
-- When possible, follow one exact witness across consecutive iterations and ask:
-  - when did it first appear?
-  - what predecessor or transformation created it?
-  - why is it present in one system but not the other?
-
-Do not stop at “family X happens more.” Keep going until you can explain why more opportunities exist.
-
 ## Falsifiability and Honesty
 
 - Prefer direct program runs over reasoning from source alone when behavior is in question.
