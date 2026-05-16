@@ -1,0 +1,3 @@
+[submodule "primary-source-spec-refactor/references/sources/diataxis-documentation-framework"]
+	path = primary-source-spec-refactor/references/sources/diataxis-documentation-framework
+	url = https://github.com/evildmp/diataxis-documentation-framework.git

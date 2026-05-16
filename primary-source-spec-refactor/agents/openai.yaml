@@ -1,0 +1,6 @@
+interface:
+  display_name: "Spec Refactor"
+  short_description: "Evidence-backed RFC and spec refactoring"
+  default_prompt: "Use $primary-source-spec-refactor to refactor this technical spec into evidence-backed RFCs, ADRs, and implementation briefs."
+policy:
+  allow_implicit_invocation: true
