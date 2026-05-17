@@ -17,6 +17,9 @@ This file maps the skill's practices to bundled primary sources. Use it to decid
 - Comparing high-need topics against current doc coverage.
 - Treating under-covered, missing, or mismatched topics as prioritization signals.
 - Triangulating suspected gaps against multiple evidence sources before refactoring.
+- Prioritizing what the final document must explain, not replacing the final document with a topic/status matrix.
+
+**Caution**: Topical alignment measures coverage against reader needs. It does not by itself create a comprehensible architecture or proposal. Use KU maps and alignment classifications as planning/evidence scaffolding; put them in appendices or companion notes unless the requested artifact is explicitly a research ledger.
 
 **Useful search terms**: `topical alignment`, `concrete information needs`, `knowledge unit`, `anchor`, `Q&A`, `documentation`, `implications`.
 
@@ -56,6 +59,7 @@ This file maps the skill's practices to bundled primary sources. Use it to decid
 - Splitting large proposals.
 - Adding status, ownership, motivation, guide-level explanation, reference-level specification, rationale, alternatives, drawbacks, and unresolved questions.
 - Making design review possible before implementation.
+- Keeping the proposal itself readable as the proposed design, with detailed research gaps separated from the guide-level explanation and reference specification.
 
 **Useful search terms**: `Summary`, `Motivation`, `Guide-level explanation`, `Reference-level explanation`, `Drawbacks`, `Rationale`, `Unresolved questions`, `Status`, `Sponsor`.
 

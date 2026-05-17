@@ -1,5 +1,7 @@
 # Evidence Matrix
 
+Use this as traceability support. In RFCs/specs, place the completed matrix in an appendix or companion note unless the user explicitly asks for evidence-matrix-first output.
+
 | Knowledge unit | Claim or need | Primary project evidence | External method source | Freshness | Gap/risk | Action |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | Current / stale / unverified |  | Preserve / rewrite / split / ask / defer |

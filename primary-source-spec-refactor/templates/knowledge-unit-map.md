@@ -1,5 +1,7 @@
 # Knowledge Unit Map
 
+Use this as scaffolding for deciding what the final artifact must cover. Do not use it as the main body of an architecture RFC/spec unless the requested output is explicitly a research ledger.
+
 | Knowledge unit | Anchor terms | Reader need | Current coverage | Classification | Next artifact |
 | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | Convergent / Divergent / Absent / Deferred / Blocked |  |
