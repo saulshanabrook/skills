@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub PR Worktree Checkout"
+  short_description: "Reuse or open GitHub PR worktrees"
+  default_prompt: "Use $github-pr-worktree-checkout to reuse or open this pull request in a local worktree."

@@ -1,6 +1,6 @@
 ---
 name: github-actions-rest-logs
-description: Use when a user wants GitHub Actions runs, jobs, or raw job logs fetched directly from the GitHub REST API with GITHUB_PAT_TOKEN, especially when MCP or the web UI does not expose enough detail to diagnose a failing workflow.
+description: Use when a user wants GitHub Actions runs, jobs, or raw job logs fetched through an authenticated GitHub CLI session, especially when MCP or the web UI does not expose enough detail to diagnose a failing workflow.
 ---
 
 # GitHub Actions REST Logs
@@ -9,17 +9,15 @@ Use this skill when:
 
 - a user asks for the latest GitHub Actions run or failing job logs
 - you need raw job logs rather than summary status
-- `GITHUB_PAT_TOKEN` is available in the environment
+- the GitHub CLI is authenticated for the target repository
 
 ## Workflow
 
 1. Determine the repo from `git remote get-url origin` unless the user gave `owner/repo`.
-2. Confirm `GITHUB_PAT_TOKEN` is set before making API requests.
-3. List recent runs and pick the latest relevant run:
-   - `curl -sS -H "Authorization: Bearer $GITHUB_PAT_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/$repo/actions/runs?per_page=10" | jq ...`
-4. List jobs for the selected run:
-   - `curl -sS ... "https://api.github.com/repos/$repo/actions/runs/$run_id/jobs?per_page=100" | jq ...`
-5. Download logs for failed jobs with `curl -L` against `/actions/jobs/$job_id/logs`.
+2. Confirm keychain-backed CLI authentication with `gh auth status --hostname github.com`; use `gh auth login` if needed.
+3. List recent runs and pick the latest relevant run with the bundled helper.
+4. List jobs for the selected run, then download logs for the failed jobs.
+5. Use `gh api` for any endpoint the helper does not cover. Do not persist a GitHub token in shell configuration.
 6. Summarize the actionable failure, not just the final GitHub wrapper error.
 
 ## Preferred commands
@@ -31,6 +29,7 @@ Use this skill when:
 ## Diagnosis guidance
 
 - Prefer the newest failed CI run on the current branch or PR unless the user points to a different run.
+- If GitHub returns `410 Gone`, the retained logs have expired; report that boundary and use a newer run or reproduce locally.
 - For workflow command strings, inspect quoting carefully. GitHub Actions wrappers often add their own shell quoting.
 - When a job fails before tests run, look for argument parsing errors, missing files, bad selectors, or shell escaping before changing product code.
 - Quote URLs in `zsh` when they contain `?`.

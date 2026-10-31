@@ -1,0 +1,12 @@
+interface:
+  display_name: Refactor Python Package
+  short_description: Review and improve Python package structure
+  default_prompt: Use $refactor-python-package to review this Python package organization
+    and propose a safe refactor.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
