@@ -7,7 +7,7 @@ description: "Respond to PR reviews or design and documentation feedback through
 
 Treat feedback as evidence about how someone understands the artifact. Answer the concrete concerns and investigate consequential differences in understanding together. Your design and assumptions are open to revision. Success is shared understanding sufficient for the decision, including a clearly located disagreement; it is not persuading the reviewer to accept your original solution. This is an ongoing dialogue, not a requirement to complete a diagnosis in one reply. A useful turn may be one question when a consequential uncertainty actually needs their input.
 
-Do the necessary investigation, then give the smallest useful response. A straightforward fix or naming nit needs no elaborate analysis.
+Do the necessary work, then give the smallest useful response. When the intent is clear and changes are authorized, carry the work through a validated correction or a concrete reason not to adopt the suggestion. A straightforward fix or naming nit needs no elaborate analysis.
 
 ## Find what the comment is really asking
 
@@ -34,6 +34,8 @@ Choose an explanation when a known distinction answers the question, an experime
 
 Use available evidence and do the author's investigation before asking the reviewer to restate an actionable request. Do not ask a priorities question merely because technical work or explanation remains. A question is useful when its answer can change the next move and the current context does not already supply it.
 
+Distinguish unclear intent from unfinished engineering. If the desired outcome is understood, resolve testable uncertainty through authorized work: try the suggestion, revise it if necessary, and decide whether to use it. A promising prototype or inconclusive measurement is an intermediate result, not automatically a reason to hand the decision back. Ask for input when a consequential requirement, priority, or permission is genuinely missing; do not reopen an established preference.
+
 Choose a focused question suited to the current uncertainty, for example:
 
 - A concrete case: “Where would this approach be awkward?”
@@ -52,7 +54,7 @@ Evaluate the suggested alternative on its own terms. Choose the cheapest discrim
 
 For complexity feedback, investigate keeping the useful behavior while simplifying its representation, ownership, or shared machinery. A speedup does not show that simplification is impossible. Establish a real coupling before presenting speed and simplicity as competing goals; explain what can be shared and what still needs a distinct path.
 
-When behavior or performance is uncertain and a feasible check can answer the reviewer's question, run it before making a confident reply. Do not merely write “we haven't tested that.” Use focused checks and existing valid evidence; broaden validation when the accepted change or remaining risk warrants it, not after every exploratory edit. If investigation would exceed the authorized scope, explain the limit and the next useful check.
+When behavior or performance is uncertain and a feasible check can answer the reviewer's question, run it before making a confident reply. Do not merely write “we haven't tested that.” Follow a promising alternative into the actual change and its relevant dependencies before calling it a fix; isolated success may not survive integration. Use focused checks and existing valid evidence; broaden validation when the accepted change or remaining risk warrants it, not after every exploratory edit. Choose the check that can change the decision, rather than collecting more samples by default. If further work exceeds scope or meets a real blocker, identify it and the concrete next action.
 
 Update code, tests, documentation, your model, or the proposed decision as the evidence warrants. Do not force a code change to demonstrate responsiveness, or retain complexity just because it is already implemented. If the remaining difference is a priority choice, name the choice instead of presenting it as technical inevitability. This combines [reflective design inquiry and code-review findings](references/literature.md), rather than assuming every comment is a request for a patch.
 
@@ -60,12 +62,14 @@ Update code, tests, documentation, your model, or the proposed decision as the e
 
 Answer the actual question first. Include only the pieces needed here:
 
+- the decision: what changed and was validated, or why the tested alternative was not selected;
 - the relevant premise or distinction, including your earlier mistaken assumption when useful;
 - what the investigation established, with a small example or direct evidence;
-- what changed, or why the tested alternative was not selected;
-- the unresolved question or tradeoff, if one remains.
+- any unresolved issue, what it depends on, and who will take the next concrete action.
 
 This is a selection guide, not a mandatory template. “Changed X; tests pass” does not answer “Why not Y?” For that question, explain when Y would work and what evidence supports the deciding distinction. Conversely, do not turn a simple accepted correction into a design essay.
+
+Lead with a disposition, not an experiment diary. Feasibility is not a recommendation: do not leave the reader to infer whether you favor using the alternative. If the suggestion worked and you made the change, say so. If an actual blocker, scope boundary, or requested checkpoint leaves work unfinished, state your recommendation, the specific remaining action, and which result would change the decision; a promise to act is not completion when you can do that work now. Do not end at “might work,” “needs more data,” or a statistical caveat. Keep prototype, integrated, committed, and published status accurate. A plan or draft-only assignment still needs your recommendation, with any decisive check named; it does not authorize implementing it or pretending it is done. Honor requested review checkpoints.
 
 Use the closest comparison for each empirical question; link supporting cohorts and detailed methodology. One result must not crowd out answers to other parts of the comment. Name comparison endpoints by what they do, and distinguish a marginal change from a whole-system gain. Do not retell experiments that do not change an answer.
 
@@ -92,6 +96,6 @@ Honor the task's authorization: drafting a reply does not authorize posting it, 
 
 ## Check before handing back
 
-Would the reviewer still need to ask any part of the original question? Are the technical terms grounded in code, documentation, or human usage? Can they understand the operation, comparison, and deciding evidence? Have you fairly tested a live alternative, revised your own view where warranted, and made any remaining disagreement explicit? Concision removes repetition, not answers. Remove detail that does not help; keep what covers each concern.
+Would the reviewer still need to ask any part of the original question, or ask “so are you using it?” Have you completed the available authorized work rather than handing back your own engineering decision? Are any remaining dependencies and next actions clear? Are the technical terms grounded in code, documentation, or human usage? Can they understand the operation, comparison, and deciding evidence? Have you fairly tested a live alternative, revised your own view where warranted, and made any remaining disagreement explicit? Concision removes repetition, not answers. Remove detail that does not help; keep what covers each concern.
 
 For examples of different outcomes and reply lengths, read [examples](references/examples.md). For the research behind the approach and its limits, read [literature](references/literature.md); ordinary use does not require rereading it or conducting a literature search.

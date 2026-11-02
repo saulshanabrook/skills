@@ -1,4 +1,4 @@
 interface:
   display_name: "Respond to Review"
   short_description: "Work through feedback toward shared understanding"
-  default_prompt: "Use $respond-to-review to understand this feedback, investigate differences in assumptions or goals, and choose a concise next question, explanation, or change."
+  default_prompt: "Use $respond-to-review to investigate this feedback, carry through authorized changes, and draft a concise reply that makes the outcome and any remaining dependency clear."
