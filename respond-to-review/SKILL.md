@@ -9,6 +9,8 @@ Treat feedback as evidence about how someone understands the artifact. Answer th
 
 Do the necessary work, then give the smallest useful response. When the intent is clear and changes are authorized, carry the work through a validated correction or a concrete reason not to adopt the suggestion. A straightforward fix or naming nit needs no elaborate analysis.
 
+For actionable PR feedback, finish the useful implementation, integration, and validation available within the task's authorization before replying. When publication is authorized, commit and push the fixes, verify the remote PR head contains them, then link the reviewer to the actual changes. Avoid “I'll do it” or prototype/status replies while you can complete that work; let the reviewer assess the result in one visit. Respect private or draft-only scope, unavailable publishing permissions, and requested user review of outward text. A genuine blocker or missing intent warrants a timely question or accurate status; ask necessary clarification when it arises, without waiting for a fix to exist.
+
 ## Find what the comment is really asking
 
 Read the exact comment, surrounding thread, relevant artifact, and current implementation. For PRs, distinguish the reviewed version from the current head. Recover the question behind the wording: “Why so global?” can challenge locality; “Could this happen later?” can propose a different ownership boundary.

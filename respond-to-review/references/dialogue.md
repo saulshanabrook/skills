@@ -31,9 +31,11 @@ Author: “That separates two things: old records still need checking, but the r
 
 Reviewer: “Yes, provided the parser can still report the original input location.”
 
-Author: “I'll check whether the shared validator can return a diagnostic that each caller attaches to its own location.”
+With the intent now clear and implementation and publication authorized, the author checks that the shared validator can return a diagnostic that each caller attaches to its own location, integrates the change, validates both callers, and pushes it. They verify the remote head before replying:
 
-This creates a focused technical investigation from a newly articulated design criterion. It does not claim that the refactor works before checking, or that the reviewer initially had a complete alternative in mind.
+Author: “Both callers now share the validator in [the commit]. Each attaches its original input location to the returned diagnostic; the parser and stored-record checks pass.”
+
+The newly articulated criterion leads to a focused investigation and an inspectable result. If a real blocker requires the reviewer's input, ask the specific question then. Do not add a promise to investigate when the authorized investigation and fix can be completed first, or imply that the reviewer initially had a complete alternative in mind.
 
 ## Questions can expose the author's goal too
 
