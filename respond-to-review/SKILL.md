@@ -38,6 +38,8 @@ Use available evidence and do the author's investigation before asking the revie
 
 Distinguish unclear intent from unfinished engineering. If the desired outcome is understood, resolve testable uncertainty through authorized work: try the suggestion, revise it if necessary, and decide whether to use it. A promising prototype or inconclusive measurement is an intermediate result, not automatically a reason to hand the decision back. Ask for input when a consequential requirement, priority, or permission is genuinely missing; do not reopen an established preference.
 
+Carry the established decision criterion through uncertain evidence. If the user prefers simplification unless a material regression is demonstrated on needed workloads, inconclusive evidence does not justify retaining complexity. Results from different workloads can favor different designs without contradicting each other; explain their relevance and which cost the decision accepts or rejects. A new stress case can reveal a cost without making that cost decisive under the agreed criterion. Run a feasible discriminating check when it can change the choice; otherwise decide under that criterion rather than silently substituting your own priority.
+
 Choose a focused question suited to the current uncertainty, for example:
 
 - A concrete case: “Where would this approach be awkward?”
@@ -52,7 +54,7 @@ Listen to the answer; reflect the consequential point when helpful and invite co
 
 Ask what would support or overturn your current explanation. A review can reveal a mistaken assumption, a better design, missing evidence, or a communication failure. A factual check cannot settle a difference in goals or priorities.
 
-Evaluate the suggested alternative on its own terms. Choose the cheapest discriminating check: source inspection, a concrete trace, a small prototype, a semantic probe, or a matched measurement. Verify that a prototype actually takes the proposed path under the relevant configuration. A broad rewrite's failure does not reject a narrower alternative it also changed. Keep established facts, measured results, inferences, and untested possibilities distinct.
+Evaluate the suggested alternative on its own terms. Choose the cheapest discriminating check: source inspection, a concrete trace, a small prototype, a semantic probe, or a matched measurement. Verify that a prototype actually takes the proposed path under the relevant configuration. If it also changes other behavior, test a feasible variant that preserves the original behavior before attributing a regression to the requested property. Keep established facts, measured results, inferences, and untested possibilities distinct.
 
 For complexity feedback, investigate keeping the useful behavior while simplifying its representation, ownership, or shared machinery. A speedup does not show that simplification is impossible. Establish a real coupling before presenting speed and simplicity as competing goals; explain what can be shared and what still needs a distinct path.
 
