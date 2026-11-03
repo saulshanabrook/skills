@@ -21,7 +21,9 @@ python3 /path/to/respond-to-review/scripts/fetch_comments.py > /tmp/pr-review.js
 
 Run it from the repository checkout; substitute the installed skill's path above. It requires Git and authenticated GitHub CLI access. If authentication fails, ask the user to run `gh auth login`; do not treat a rate limit or another API failure as an authentication problem. For a PR specified by URL or number, use the connector or `gh` to retrieve that PR rather than silently substituting the current branch's PR.
 
-Inspect each thread's replies before deciding what remains. An unresolved or outdated flag alone does not establish that a concern is unanswered. Follow the user's existing scope and review checkpoints; ask which comments to address only when that choice is genuinely unclear. For a stack, work in dependency order when that avoids repeated work.
+Consider all comments, review summaries, and replies in the requested review together before choosing individual fixes. Identify shared causes, dependencies, and conflicting suggestions; check that addressing one concern does not undermine another. Group linked concerns for investigation and shared changes, while retaining a direct answer to each question. A user checkpoint to handle one comment at a time controls implementation and replies, not which feedback informs the decision.
+
+An unresolved or outdated flag alone does not establish that a concern is unanswered. Follow the user's existing scope and review checkpoints; ask which comments to address only when that choice is genuinely unclear. For a stack, work in dependency order when that avoids repeated work.
 
 ## Find what the comment is really asking
 
