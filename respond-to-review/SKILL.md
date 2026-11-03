@@ -110,6 +110,14 @@ An explanatory example is not automatically a tutorial. Keep the direct answer i
 
 Honor the task's authorization: drafting a reply does not authorize posting it, resolving threads, or changing unrelated code. For authorized edits to existing replies, preserve useful original context and links; avoid duplicate responses. After posting, verify the text and referenced revision.
 
+## Learn from feedback on the response
+
+When the user or reviewer says a reply missed a question, omitted an explanation, or failed to try an alternative, revisit the original concern and your response. Repair the answer and do any warranted investigation; improving the skill accompanies that work rather than replacing it. Identify what led to the miss: absent or misleading guidance, failure to apply existing guidance, or newly supplied context.
+
+Look for the smallest reusable lesson supported by that feedback. Prefer clarifying an existing instruction or example over adding another rule. Do not turn a project-specific conclusion or one person's preference into a universal requirement, or add duplicate guidance when the instruction was already clear. If a change is warranted, check it against the failed case and, when useful, a different case where it should not apply. Keep validation proportional to the change.
+
+When a skill change is warranted, maintain this personal skill as part of that loop. Edit its canonical source, resolving installed symlinks rather than creating another copy; Saul's checkout is `~/.codex/skills`, also linked as `~/p/skills`. Follow the checkout's `AGENTS.md`, inspect and validate the change, then commit only task-owned files and push using its scoped publishing helper. Verify the remote revision and briefly report the lesson and publication. Honor explicit private, draft-only, or read-only scope. If publishing is blocked, retain the local change or commit and report the actual blocker. Do not claim that the skill improved in future sessions until the update is durably saved.
+
 ## Check before handing back
 
 Would the reviewer still need to ask any part of the original question, or ask “so are you using it?” Have you completed the available authorized work rather than handing back your own engineering decision? Are any remaining dependencies and next actions clear? Are the technical terms grounded in code, documentation, or human usage? Can they understand the operation, comparison, and deciding evidence? Have you fairly tested a live alternative, revised your own view where warranted, and made any remaining disagreement explicit? Concision removes repetition, not answers. Remove detail that does not help; keep what covers each concern.
