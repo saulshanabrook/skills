@@ -1,6 +1,6 @@
 ---
 name: respond-to-review
-description: "Respond to PR reviews or design and documentation feedback through iterative dialogue: identify differences in assumptions or goals, choose useful questions or experiments, revise understanding, and reply concisely. Use for existing feedback, not an initial review."
+description: "Retrieve and respond to GitHub PR reviews or design and documentation feedback through iterative dialogue: identify differences in assumptions or goals, choose useful questions or experiments, revise understanding, and reply concisely. Use for existing feedback, not an initial review."
 ---
 
 # Respond to Review
@@ -10,6 +10,18 @@ Treat feedback as evidence about how someone understands the artifact. Answer th
 Do the necessary work, then give the smallest useful response. When the intent is clear and changes are authorized, carry the work through a validated correction or a concrete reason not to adopt the suggestion. A straightforward fix or naming nit needs no elaborate analysis.
 
 For actionable PR feedback, finish the useful implementation, integration, and validation available within the task's authorization before replying. When publication is authorized, commit and push the fixes, verify the remote PR head contains them, then link the reviewer to the actual changes. Avoid “I'll do it” or prototype/status replies while you can complete that work; let the reviewer assess the result in one visit. Respect private or draft-only scope, unavailable publishing permissions, and requested user review of outward text. A genuine blocker or missing intent warrants a timely question or accurate status; ask necessary clarification when it arises, without waiting for a fix to exist.
+
+## Gather GitHub feedback
+
+Use an available GitHub connector or authenticated `gh` to read the requested PR's conversation comments, submitted reviews, and inline threads, including replies and resolved/outdated state. For the PR associated with the current checkout's branch, the bundled collector retrieves these as JSON:
+
+```sh
+python3 /path/to/respond-to-review/scripts/fetch_comments.py > /tmp/pr-review.json
+```
+
+Run it from the repository checkout; substitute the installed skill's path above. It requires Git and authenticated GitHub CLI access. If authentication fails, ask the user to run `gh auth login`; do not treat a rate limit or another API failure as an authentication problem. For a PR specified by URL or number, use the connector or `gh` to retrieve that PR rather than silently substituting the current branch's PR.
+
+Inspect each thread's replies before deciding what remains. An unresolved or outdated flag alone does not establish that a concern is unanswered. Follow the user's existing scope and review checkpoints; ask which comments to address only when that choice is genuinely unclear. For a stack, work in dependency order when that avoids repeated work.
 
 ## Find what the comment is really asking
 

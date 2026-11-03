@@ -36,9 +36,8 @@ fast-forward leaves local work for you to reconcile.
 
 | Skill | Purpose |
 | --- | --- |
-| [respond-to-review](respond-to-review/SKILL.md) | Investigate feedback and work toward shared understanding through questions, evidence, changes, and concise replies. |
+| [respond-to-review](respond-to-review/SKILL.md) | Retrieve GitHub review threads and investigate feedback through questions, evidence, changes, and concise replies. |
 | [github-pr-worktree-checkout](github-pr-worktree-checkout/SKILL.md) | Reuse or create an isolated checkout for a GitHub PR; includes its Fish helper. |
-| [gh-address-comments](gh-address-comments/SKILL.md) | Retrieve and address GitHub PR comments. |
 | [github-actions-rest-logs](github-actions-rest-logs/SKILL.md) | Retrieve Actions runs, jobs, and logs using authenticated `gh`. |
 | [git-diff-convention-sync](git-diff-convention-sync/SKILL.md) | Carry conventions from an accepted diff into project guidance. |
 | [review-diff-reduction](review-diff-reduction/SKILL.md) | Reduce incidental changes in an existing diff. |
@@ -48,6 +47,10 @@ fast-forward leaves local work for you to reconcile.
 | [visualization-design-review](visualization-design-review/SKILL.md) | Design or critique visualizations around reader tasks and evidence. |
 | [jupyter-notebook](jupyter-notebook/SKILL.md) | Create and revise notebooks with appropriate templates. |
 | [sociocracy](sociocracy/SKILL.md) | Coordinate bounded agent roles, decisions, and handoffs. |
+
+`gh-address-comments` has been merged into `respond-to-review`, including its
+GitHub comment collector. If you installed the old skill through a symlink,
+remove that old link and install `respond-to-review` instead.
 
 Individual skills describe their prerequisites. GitHub skills generally need Git
 and authenticated `gh`; the worktree helper additionally needs Fish. The
