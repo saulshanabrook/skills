@@ -23,6 +23,8 @@ Run it from the repository checkout; substitute the installed skill's path above
 
 Consider all comments, review summaries, and replies in the requested review together before choosing individual fixes. Identify shared causes, dependencies, and conflicting suggestions; check that addressing one concern does not undermine another. Group linked concerns for investigation and shared changes, while retaining a direct answer to each question. A user checkpoint to handle one comment at a time controls implementation and replies, not which feedback informs the decision.
 
+For a stack, inspect both the final design and the transitions between PRs. Look for code introduced then replaced, repeated mechanical moves, and refactors mixed with behavior changes. Distinguish meaningful incremental optimizations from temporary intermediate designs, and balance cleaner boundaries against reopening already reviewed work.
+
 An unresolved or outdated flag alone does not establish that a concern is unanswered. Follow the user's existing scope and review checkpoints; ask which comments to address only when that choice is genuinely unclear. For a stack, work in dependency order when that avoids repeated work.
 
 ## Find what the comment is really asking
