@@ -15,6 +15,10 @@ conditional guidance for spatial, relational, interactive, and large displays.
 Keep the user's chosen medium and implementation stack; use the relevant
 renderer or authoring workflow to produce the artifact.
 
+For focused palette generation, text on colored fills, or color-vision
+accessibility reviews, use `visualization-color-accessibility` when available;
+it separates category distinction, text contrast, and essential symbol visibility.
+
 ## Establish the question and evidence
 
 Infer from the request and available artifacts who the reader is, what they

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visualization Color Accessibility"
+  short_description: "Choose and check colors for charts, diagrams, and text"
+  default_prompt: "Use $visualization-color-accessibility to choose colors with readable text and review color-vision accessibility."
