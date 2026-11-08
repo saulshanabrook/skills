@@ -1,9 +1,4 @@
----
-name: visualization-color-accessibility
-description: Choose, generate, and review visualization colors for color vision differences, readable text on fills, and visible graphical marks. Use for charts, diagrams, maps, and figures when palette accessibility or color-tool guidance is the task; not a full website accessibility audit.
----
-
-# Visualization Color Accessibility
+# Color accessibility workflow
 
 Treat category distinguishability, text readability, and graphical visibility
 as separate checks. A palette can pass one and fail another. Keep the user's
@@ -31,7 +26,7 @@ source colors.
 For a quick recommendation, provide a small, prioritized set of tools matched
 to the actual task, with a concrete first action in each. Distinguish a palette
 generator from a contrast checker and a CVD simulator. See
-[Tools and teaching sources](references/tools-and-sources.md) for course links,
+[Tools and teaching sources](color-tools-and-sources.md) for course links,
 automatic generators, and the existing Adobe Leonardo skill/API.
 
 For automatic selection with fixed black text, constrain candidate fills to
@@ -80,9 +75,10 @@ python3 scripts/contrast.py --foreground '#000000' --background '#F3BE63' '#9BCB
 python3 scripts/contrast.py --foreground '#5C3566' --background '#FFFFFF' '#F3BE63' '#9BCBE8' --json
 ```
 
-Paths above are relative to this skill folder. The helper rejects alpha and
-non-hex inputs; flatten/convert them first. It reports threshold checks for
-each pair, not a judgment that those thresholds apply to the whole figure.
+Run these commands from the skill folder (`visualization-design-review/`).
+The helper rejects alpha and non-hex inputs; flatten/convert them first. It
+reports threshold checks for each pair, not a judgment that those thresholds
+apply to the whole figure.
 
 ## Preserve meaning and inspect the export
 

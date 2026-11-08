@@ -1,6 +1,6 @@
 ---
 name: visualization-design-review
-description: Create or critique data visualizations by deriving encodings, scales, layout, and interaction from audience, communication goals, data structure, and reader tasks. Use for design decisions and substantive reviews of charts, maps, networks, and other data displays; complements the chosen rendering tool without prescribing a chart type or output surface.
+description: Create or critique data visualizations by deriving encodings, scales, layout, and interaction from audience, communication goals, data structure, and reader tasks. Use for design decisions and substantive reviews of charts, maps, networks, and diagrams, including palette selection, text contrast, and color-vision accessibility; complements the chosen rendering tool without prescribing a chart type or output surface.
 ---
 
 # Visualization Design and Review
@@ -14,10 +14,6 @@ It connects these decisions to primary visualization teaching sources and adds
 conditional guidance for spatial, relational, interactive, and large displays.
 Keep the user's chosen medium and implementation stack; use the relevant
 renderer or authoring workflow to produce the artifact.
-
-For focused palette generation, text on colored fills, or color-vision
-accessibility reviews, use `visualization-color-accessibility` when available;
-it separates category distinction, text contrast, and essential symbol visibility.
 
 ## Establish the question and evidence
 
@@ -67,6 +63,31 @@ and controls: what task becomes harder or what ambiguity appears without this
 element? Remove decoration and repetition that do no work. Retain useful
 redundancy, orientation, context, and accessibility cues. Move secondary detail
 to a caption or accessible detail view only if the primary reading still works.
+
+## Color and accessibility
+
+Treat category distinguishability, text readability, and essential mark
+visibility as separate checks. Use qualitative palettes for unordered categories,
+sequential palettes for magnitude, and diverging palettes for a meaningful
+center. Preserve independent properties that can co-occur.
+
+Check text against each actual fill or composited overlap it crosses, and
+essential symbols and boundaries against their adjacent colors. WCAG 2 provides
+a baseline of 4.5:1 for normal text, 3:1 for large text, and 3:1 for graphical
+information needed to understand the figure under the applicable criterion.
+Do not require that ratio between every pair of categorical swatches. A palette
+generator's contrast with the canvas does not establish text contrast on fills.
+
+Preserve meaning with visible labels, symbols, patterns, or other cues beyond
+hue. Inspect relevant color-vision simulations and grayscale at the intended
+viewing size; report which checks were actually run. Contrast ratios and
+simulation results do not establish whole-artifact accessibility by themselves.
+
+For palette generation, detailed contrast checks, or color-specific review,
+read the [color accessibility workflow](references/color-accessibility.md).
+The [color tools and source guide](references/color-tools-and-sources.md)
+includes UW teaching material, WCAG criteria, automatic generators, and checkers.
+An offline [contrast calculator](scripts/contrast.py) checks opaque sRGB pairs.
 
 ## Inspect the result and iterate
 

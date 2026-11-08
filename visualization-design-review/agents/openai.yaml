@@ -1,4 +1,4 @@
 interface:
   display_name: "Visualization Design and Review"
-  short_description: "Derive and critique visual designs from reader tasks"
-  default_prompt: "Use $visualization-design-review to create or critique this visualization for its audience, data, tasks, and intended display size."
+  short_description: "Review visual designs, palettes, and text contrast"
+  default_prompt: "Use $visualization-design-review to create or critique this visualization for its audience, data, tasks, color accessibility, and intended display size."
