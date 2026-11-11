@@ -54,6 +54,14 @@ Explain why the relevant capabilities help and report the observed benefit. An a
 
 Do not remove a selection criterion whose omission would bias the apparent coverage. Do not turn a requested observation count into a completed measurement claim.
 
+## Put validation outcomes with the existing inventory
+
+**Before:** A table already identifies the workload groups, but a separate main table mainly reports execution and checking counts as completed/total.
+
+**Repair, when the same validation applies and exceptions are few:** Add a validation outcome to the existing inventory. Define it in terms of the evidence relevant to the claim: for example, the prescribed assertions and extracted results agree with the reference, and proof certificates validate where applicable. Note the few timeout or memory exclusions concisely beside the affected entries or in a footnote. Keep detailed per-input counts, run status, and diagnostics in the artifact.
+
+Successful execution alone does not warrant a validation mark. Use a pending marker until the stated checks actually pass, and do not let a tested subset appear to cover excluded inputs. If differing coverage or a substantial pattern of failures is itself part of the scientific answer, retain enough explicit outcomes or counts to show it; consolidation is not a requirement to use checkmarks or conceal failures.
+
 ## Make the mechanism visible before generalizing
 
 **Before:** A generic rule template introduces parameters used only in later sections, followed by unlabeled source and generated programs.

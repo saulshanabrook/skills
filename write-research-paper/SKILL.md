@@ -35,6 +35,8 @@ Layer an explanation so readers can grasp the key idea before following the gene
 
 For adopting a capability in existing programs, lead with what users can now do, what programs were tested, and how preserved behavior or successful outputs were checked. Describe the instrumentation only as far as needed to understand that evidence. Capability and compatibility evidence belong beside performance evidence; timing alone cannot establish that existing programs still work.
 
+When validation applies to an existing workload inventory and exceptions are few, prefer a meaningful outcome indicator in that table with concise exception notes over a separate main-text progress matrix. Define the validated property, keep execution distinct from validation, and leave unfinished outcomes marked as pending. Retain detailed counts and status in the artifact; preserve excluded cases and failures where they affect the claim. See the [inventory example](references/revision-examples.md#put-validation-outcomes-with-the-existing-inventory).
+
 For an application case study with results, lead with what the combined capabilities achieved on an existing problem and the practical benefit. Then explain the problem's origin and why the combination matters. Introduce dataset and feature inventories afterward when relevant. Distinguish a successful combined example from evidence that every component is necessary; necessity or performance attribution needs a supporting comparison or argument.
 
 ## Make strong claims at the supported scope
