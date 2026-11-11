@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Paper Writing"
+  short_description: "Shape papers around claims and reader questions"
+  default_prompt: "Use $write-research-paper to revise this manuscript around its claims, evidence, and reader questions."
