@@ -23,7 +23,7 @@ Use this to find gaps, not as a mandatory table in the paper. Research questions
 
 ## Put the reader's point before machinery
 
-Lead empirical results with the supported finding and its significance, then the evidence and method. A capability section says what worked; a performance section says what it cost. Orient the reader to the question as needed, but do not replace the answer with repeated “We test whether” openers. When results are pending, put a focused TODO for the missing finding up front rather than inventing a conclusion or filling the gap with methods prose. In technical exposition, explain the problem, output, and key idea before machinery whose purpose would otherwise be unclear; definitions and proofs may need prerequisites first.
+Lead empirical results with the supported finding and its significance, then the evidence and method. A capability section says what worked; a performance section says what it cost. Orient the reader to the question as needed, but do not replace the answer with repeated “We test whether” openers. When the intended argument is under review before measurements finish, draft actual provisional answer prose with TODOs for missing values and clearly mark it as an unverified hypothesis. Revise its direction and scope as well as its numbers when evidence arrives. If no answer is proposed yet, leave a focused result TODO. In technical exposition, explain the problem, output, and key idea before machinery whose purpose would otherwise be unclear; definitions and proofs may need prerequisites first.
 
 Use the [primary writing guidance and paper examples](references/writing-sources.md) to settle a particular organization or detail decision. They support reader-oriented argument, not a compulsory opening formula; the guides differ on some prescriptions.
 
@@ -59,7 +59,7 @@ For PL/CS contribution positioning and source-grounded comparisons, use the [wri
 
 ## Learn from feedback at the right scope
 
-Repair the assigned paper issue first. Then distinguish missing reusable guidance, failure to apply existing guidance, a manuscript-specific fact, and a personal preference. Keep per-paper facts and protocols in that project's notes. Save only a clear transferable condition or useful example, preferably by clarifying an existing instruction rather than accumulating prohibitions.
+Feedback on skill-guided output triggers repairing the assigned passage and checking this skill for a reusable lesson. Distinguish missing guidance, failure to apply existing guidance, a manuscript-specific fact, and a personal preference. When the scoped generalization is clear, save the smallest useful clarification without asking for approval again. If the intended general rule is materially unclear, ask the user how to generalize it rather than hardcoding a guess; continue clear local repairs. Keep per-paper facts and protocols in that project's notes. Applying existing guidance can suffice; checking the skill does not require changing it after every correction.
 
 For Saul's personal skill collection, standing authorization covers saving clear, scoped lessons from follow-up writing feedback in this skill's canonical source and publishing those skill changes under its repository's rules. Explicit paper-only, private, read-only, or draft-only limits override that authorization. It does not authorize broader manuscript edits, manuscript publication, external messages, or changes to unrelated skills. A related-work-specific lesson belongs in the specialist when that update is in scope.
 

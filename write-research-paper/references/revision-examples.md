@@ -16,7 +16,9 @@ Retain the mechanism in methods if needed to explain what is proved and what is 
 
 **After, if measurements support it:** “Translation overhead is concentrated in short-running workloads.” Then explain the comparison, chart, and evidence for that finding.
 
-**While results are pending:** Begin with “TODO: summarize the runtime comparison once measured.” Keep the necessary method below it. Replacing the chart description with “We test whether our approach is fast” still withholds the answer when results exist and adds filler when they do not.
+**While the intended argument is under review and results are pending:** Draft the proposed answer itself, for example: “[Provisional answer; measurements pending.] Translation overhead is concentrated in short-running workloads, while longer workloads run within TODO× of the reference.” This is an explicitly unverified hypothesis, not a reported result. Revise or replace both the claim and the missing values after measurement; do not merely fill numbers into a conclusion contradicted by the data.
+
+If no answer is proposed yet, a focused result TODO is enough. Replacing the chart description with “We test whether our approach is fast” still withholds the answer when results exist and adds filler when the author wants to review an intended argument.
 
 A separate comparison can ask what proof production costs for existing programs. The same programs may provide behavioral evidence earlier and timing evidence here; that does not require another research question or repeated collection details.
 
