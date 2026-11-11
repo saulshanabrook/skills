@@ -16,6 +16,8 @@ For consequential feedback, keep enough working context to identify the concern,
 
 Before a skill change, check both the triggering case and a plausible contrasting case. Recent or emphatic feedback is not by itself evidence for a universal rule. Prefer updating an existing instruction over accumulating restrictions.
 
+When a proposed workflow lesson depends on a source's advice or example, use the [decision-to-source index](sources.md#choose-a-source-for-the-decision) and read the relevant original passage rather than relying on its short reading note. Reread only the sources needed for the changed decision, not the entire corpus after every tweak. The academic guides support listening and clarification; standing learning authorization comes from the user, not those guides. Preserve the immutable source originals and their notices; update the skill's guidance or reading notes instead.
+
 ## Examples and contrasting cases
 
 - **A citation supports pass fusion, but the sentence claims semantic lowering.** Repair the citation or narrow the claim; learn to match the comparison mechanism. Retain fusion papers when fusion is actually the design choice being positioned.
@@ -41,4 +43,4 @@ python3 scripts/skills.py publish write-pl-related-work -m "Clarify a reusable r
 
 Account for any earlier local commits before pushing, preserve unrelated work, and follow the repository's normal-push rules. If publishing fails, keep the local change/commit and report the concrete failure. Another agent may own publication; in that case hand over the files and validation result rather than racing its Git operations.
 
-Validate the changed guidance with the feedback case and contrasting case. Use structural validation when applicable and a bounded behavioral check when the change can alter decisions. Stop when the issue is repaired and the useful lesson is durably saved; report the meaningful generalization briefly.
+Validate the changed guidance with the feedback case and contrasting case. Use structural validation when applicable and a bounded behavioral check when the change can alter decisions. Keep skill-maintenance tests in isolated fixtures unless a live-manuscript task is separately assigned. Stop when the issue is repaired and the useful lesson is durably saved; report the meaningful generalization briefly.

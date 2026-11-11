@@ -3,45 +3,42 @@ name: write-pl-related-work
 description: Research, plan, draft, and revise related-work sections for programming-languages and computer-science papers, with source-grounded comparisons and reusable learning from follow-up feedback. Use for positioning a manuscript's contributions and design choices, not generic prose editing or unrelated literature surveys.
 ---
 
-# PL Related Work
+# How to write or revise PL related work
 
-Help the reader understand where the paper's contribution comes from, which alternatives address the same question, and what the paper establishes. Start planning from the manuscript's contribution, design choice, result, or guarantee; select literature that clarifies it.
+Produce or repair the assigned related-work passage so readers can assess the manuscript's contribution, its foundations, and relevant alternatives. Use the route that fits the task; this is not a requirement to repeat every stage.
 
-## Establish the assignment
+## Enter at the task you have
 
-Read the current assigned passage, abstract/introduction, relevant technical claims, bibliography, and supplied evidence as needed. Identify what the reader must understand to assess the contribution. Preserve the user's scope, coauthor ownership, manual edits, and deliberate deletions. A request to brainstorm, review, or research does not authorize manuscript edits.
+For a new area, begin with the comparison question below. For a narrow repair, enter at the disputed claim and its source. If verified notes already establish the needed relationships, skip renewed discovery. For an outline-only task, return the proposed argument and supporting sources, then stop before drafting prose.
 
-Scale the work to the request. A narrow repair may need only the current sentence and its source; a new area may need an outline and focused research. Clarify a consequential missing decision while continuing independent work that is already clear.
+Honor explicit read-only, brainstorming, or paper-only limits; a request to review and fix authorizes scoped repairs. Preserve coauthor ownership, manual edits, and deliberate deletions. When maintaining or validating this skill, work on the skill or isolated fixtures; apply it to a live manuscript only when assigned a manuscript task.
 
-## Establish the relationships
+## Identify the comparison the reader needs
 
-Consult manuscript sources, bibliography, and provided PDFs before expanding the search. Read the relevant primary-source text beyond abstracts and search snippets, including complete pages, qualifications, and referenced figures or tables that bear on the claim. Check citation metadata and the version actually read.
+Read the current passage, abstract/introduction, relevant technical claim, and bibliography as needed. Identify the contribution, design choice, result, or guarantee being positioned. State what the reader must understand to assess it, then select candidate relationships: a foundation, inherited mechanism, nearest alternative, changed objective, complement, or meaningful lineage.
 
-Keep research notes rich enough to support each material comparison: the mechanism, relationship to this manuscript, exact evidence location/version, relevant limit, and proposed claim. Paper-by-paper notes are useful working material. Mark whether a connection is explicit in the source or an analogy drawn for this paper. Missing sources or proofs must be named, never filled in by inference.
+If purpose or scope is materially unclear, ask a concise question while continuing independent work that is clear. For guidance on reader goals and comparison, use the [decision-to-source index](references/sources.md#choose-a-source-for-the-decision).
 
-Compare the property that matters:
+## Check the evidence you need
 
-- An implemented mechanism, proposed direction, prototype, and proved result are different evidence.
-- Type preservation, semantic preservation, proof production, certificate checking, and mechanization of a component or the whole stack are different guarantees.
-- A software package's integration boundary need not be the boundary of its source transformation or evaluator changes.
-- Performance comparisons require the timed operations, baselines, workloads/cohorts, and aggregation; distinguish runtime ratios from added percentages.
+Consult manuscript sources, supplied PDFs, and existing notes before expanding the search. For each material comparison, record the mechanism, relationship, exact source/version/location, relevant limit, and proposed claim. Paper-by-paper research notes are useful even when final prose will synthesize groups.
 
-Use optional library/map tools or bounded delegation when they help answer a specific gap; see [integrations.md](references/integrations.md). They are not prerequisites. Stop expanding when the selected claims and important alternatives are adequately supported.
+When a summary does not settle a distinction, open the original at the [indexed heading or PDF page](references/sources.md), read the complete relevant context, and follow the source's own cross-references when necessary. The reading notes locate evidence; they do not replace the primary text. Distinguish an author's explicit connection from your analogy, and name missing evidence rather than inventing it.
 
-## Compose and review
+Check the relevant [claim boundary](references/sources.md#check-the-claim-boundary): implementation versus proposal, the exact proof guarantee and scope, transformation versus packaging, or what a performance measurement includes. Verify citation metadata against the version actually read. Use [optional integrations or focused delegation](references/integrations.md) only to close a named gap. Stop discovery when the selected claims and important alternatives are supported.
 
-Organize final prose around actual relationships: foundations, inherited mechanisms, nearest alternatives, changed objectives, complementary techniques, or a meaningful lineage. Explain enough of a shared mechanism for the distinction to be intelligible. Credit inheritance and other systems' advantages; a difference need not imply superiority.
+## Choose the organization and placement
 
-Choose hierarchy, placement, headings, and length from reader prerequisites and venue constraints. Background may be integrated with related work; a close predecessor may deserve its own paragraph. Do not impose citation quotas, a fixed area/paragraph count, equal space, or a rule that every paragraph start or end with the present work. Some paragraphs supply context, credit, limits, or future connections. The [source corpus](references/sources.md) illustrates these alternatives; its observations are not universal PL norms.
+Group final prose by relationships that explain the contribution. Give a close predecessor more space when its mechanism needs explanation; bundle background citations when they serve the same point. Credit inherited ideas and other systems' advantages. A difference need not imply superiority.
 
-Draft only the authorized material in the requested LaTeX/BibTeX or venue format. Keep source notes and plugin research formats separate from manuscript presentation. Review the current revision, checking that compression preserved the mechanism and guarantee, citations support their attached claims, and historical priority/capability claims remain justified. Recheck changed claims after feedback; stop when material issues are resolved rather than restarting an exhaustive survey. Apply repository validation appropriate to the actual edit.
+Choose headings, hierarchy, placement, and length from reader prerequisites and venue constraints. Background may be integrated with related work. Do not impose source quotas, a fixed paragraph count, equal space, or repeated present-work openings/endings. Read the relevant [source examples](references/sources.md#paper-examples) when choosing among these alternatives; they illustrate possibilities rather than universal PL norms.
 
-## Learn from follow-up feedback
+## Draft or repair, then check the current revision
 
-Treat a follow-up tweak as immediate manuscript feedback and a possible skill lesson. Repair a clear paper issue first. Then distinguish missing guidance, failure to apply an existing rule, and new paper-specific context or a user preference.
+Write only the assigned material in the requested LaTeX/BibTeX or venue format. Keep plugin research formats and working notes separate from manuscript presentation. Check that compression preserves the mechanism and guarantee, attached citations support each claim, and historical priority/capability statements remain justified. Apply repository checks appropriate to the edit. After a bounded critique, review the changed claims in the current draft; stop when material issues are resolved.
 
-For Saul's use of this personal skill, standing authorization covers saving clear, reusable, scoped lessons from follow-up output feedback to this skill's canonical source and publishing those skill changes under its repository rules. Do not request that authorization again. Explicit paper-only, private, read-only, or draft-only instructions override it; it does not broaden manuscript-editing scope or authorize manuscript/service publication, other-skill edits, or tool-policy changes.
+## Resolve feedback and save a reusable lesson
 
-Make the smallest durable update, preferring an existing-rule clarification over a duplicate or blanket ban. Check the feedback case and a contrasting case where the rule should not apply. If the general principle is materially unclear, ask a concise question while continuing clear local repairs; keep the provisional lesson out of global instructions.
+Repair a clear paper issue first. Classify whether follow-up output feedback reveals missing guidance, failure to apply an existing rule, or new paper-specific context/preference. For Saul's use of this personal skill, standing authorization covers saving clear, reusable, scoped lessons to its canonical source and publishing those skill changes under repository rules; do not ask again. Explicit paper-only, private, read-only, or draft-only restrictions override that authorization. It does not authorize broader manuscript edits, manuscript/service publication, other-skill edits, or tool-policy changes.
 
-Read [feedback.md](references/feedback.md) for classification examples and scoped publication. Do not edit an installed cache/copy or memory as a substitute for updating the canonical skill. Keep unpublished paper details out of public instructions. Briefly report a meaningful generalized change; do not promise future learning without saving it or create an endless self-review loop.
+Make the smallest durable clarification and check both the feedback case and a contrasting case. If the general lesson is materially unclear, ask while continuing clear local repairs; keep the provisional rule out of global guidance. Follow [feedback.md](references/feedback.md) for examples, canonical-source handling, validation, and scoped publication. Report a meaningful saved generalization briefly, without creating an endless self-update loop.

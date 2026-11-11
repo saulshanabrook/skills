@@ -1,0 +1,3 @@
+*.pdf binary
+guides/diataxis-how-to.rst -text -whitespace
+guides/diataxis-license.rst -text -whitespace
