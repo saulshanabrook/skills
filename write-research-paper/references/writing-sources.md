@@ -1,6 +1,6 @@
 # Primary guidance and paper examples
 
-Read the passage relevant to the decision at hand. This bounded selection was consulted in November 2026; it is not a study of universal PL writing norms. Guide advice, observed paper organization, and our adaptation have different status. Page numbers below are physical PDF pages. The links work without a local paper cache; existing copies and rights records remain in the optional sibling related-work skill rather than being duplicated here.
+Read the passage relevant to the decision at hand. These sources were consulted in November 2026; they are not a study of universal PL writing norms. Guide advice, observed paper organization, and our adaptation have different status. Page numbers below are physical PDF pages. The links work without a local paper cache; existing copies and rights records remain in the optional sibling related-work skill rather than being duplicated here.
 
 ## Writing guidance
 
@@ -13,9 +13,20 @@ Read the passage relevant to the decision at hand. This bounded selection was co
 
 These guides are advice from individual authors, not a consensus specification. For example, Peyton Jones strongly favors later related work, while Widom gives conditional placement advice and Tellex favors earlier placement but permits later placement. The related-work specialist handles that decision in detail. Do not turn vivid prescriptions about sentence counts, page budgets, passive voice, or citation packages into global rules.
 
-## Observed paper patterns
+### Guidance addressed to PL audiences
+
+| Source and inspected passage | Explicit advice | Adaptation and limit |
+| --- | --- | --- |
+| Derek Dreyer, *How to Write Papers So People Can Read Them*, PLMW@POPL 2020: [pp.45,49,56–63,70–73](https://people.mpi-sws.org/~dreyer/talks/talk-plmw20popl.pdf#page=45) | Organize information from familiar context toward new material, keep paragraphs coherent, and present progressively deeper layers. His introduction model connects context, gap, and innovation; a key-ideas section supplies intuition before full technical development. He warns that an unexplained concrete opening can assume too much context. | Make a paper skimmable at several depths while retaining the formal argument. An example needs enough context to be intelligible; it is not automatically the best first sentence. Do not adopt the deck's page budgets or a compulsory standalone overview section. |
+| Johnson, Cook, Wirfs-Brock, Booch, Gabriel, and Beck, *How to Get a Paper Accepted at OOPSLA*, OOPSLA'93 panel: [Cook: Theoretical Papers; Gabriel: Programming Language Papers; Beck](https://www.cs.utexas.edu/~wcook/papers/HowToGetaPaperAcceptedToOOPSLA/HowToGetAPaperAcceptedToOOPSLA.htm) | The panel distinguishes kinds of contributions and their audiences. Cook asks what a theory lets readers understand or do; Gabriel asks for both implementable detail and an accessible idea; Beck treats a paper as an argument supporting a focused claim. | Match explanation and evidence to the contribution rather than forcing every paper into one evaluation template. This is historical advice from 1993, not current venue policy. Its acceptance statistics, category judgments, and fixed sentence/section prescriptions are not standing requirements. |
+
+These two originals are linked, not redistributed: no redistribution permission was inferred from public access. The existing guides' source and rights records remain in the optional [shared index](../../write-pl-related-work/references/sources.md#writing-and-how-to-guides).
+
+## Selected observed paper patterns
 
 These are observations of the cited versions, not writing rules their authors state.
+
+The [full bounded survey](pl-paper-survey.md) covers all sixteen papers in the related-work skill's example corpus, with newly inspected passages beyond related work, versions, locators, and limits. Ruler below is an additional example. Use a relevant record to choose an original passage; the tables do not replace reading that passage when making a new substantive claim.
 
 | Paper and inspected passage | Observed pattern | Reusable adaptation and boundary |
 | --- | --- | --- |
