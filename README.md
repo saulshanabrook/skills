@@ -43,6 +43,7 @@ fast-forward leaves local work for you to reconcile.
 | [review-diff-reduction](review-diff-reduction/SKILL.md) | Reduce incidental changes in an existing diff. |
 | [scientific-method-debugging](scientific-method-debugging/SKILL.md) | Investigate competing explanations with discriminating probes. |
 | [primary-source-spec-refactor](primary-source-spec-refactor/SKILL.md) | Restructure technical specifications using primary evidence. |
+| [write-pl-related-work](write-pl-related-work/SKILL.md) | Plan, research, and revise PL related work, learning from follow-up feedback. |
 | [refactor-python-package](refactor-python-package/SKILL.md) | Review and improve Python package boundaries. |
 | [visualization-design-review](visualization-design-review/SKILL.md) | Design or critique visualizations around reader tasks and evidence. |
 | [jupyter-notebook](jupyter-notebook/SKILL.md) | Create and revise notebooks with appropriate templates. |
