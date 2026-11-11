@@ -1,0 +1,4 @@
+interface:
+  display_name: "PL Related Work"
+  short_description: "Source-grounded PL related work and feedback"
+  default_prompt: "Use $write-pl-related-work to plan or revise this related-work section, checking its comparisons against primary sources."
