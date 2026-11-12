@@ -11,6 +11,8 @@ Help readers understand the contribution, assess its evidence, and see why it ma
 
 Read the assigned passage and enough surrounding claims, results, and author feedback to identify its job. Make its heading promise the content actually supplied. For substantial restructuring, inspect the relevant baseline, reviewed checkpoint, and current edits when available. Preserve user and coauthor intent, deliberate deletions, examples, citations, and technical substance. Move useful passages intact before rewriting them; do not replace considered work merely for stylistic uniformity. Mention significant retained or relocated material briefly when handing over a structural revision.
 
+Deliver authorized small text repairs promptly in the review copy after the checks they require, synchronizing dependent evidence while letting unrelated measurements, pipeline work, or broader audits continue separately.
+
 If a section's structure is unsettled, establish its argument and worked examples before polishing full prose. This is a useful entry point, not an outline-approval gate for an already authorized draft or narrow repair. When using review history, distinguish the criticism, reply, resulting revision, and present author preference. An author TODO is an open question, not an accepted rule. An old unresolved thread is not automatically a current defect, and an approval does not endorse every inferred rationale.
 
 When useful, make a small working map:
