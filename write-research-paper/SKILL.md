@@ -59,6 +59,8 @@ Connect each benchmark, corpus, and baseline to the question it answers. Explain
 
 Preserve conditions that materially affect interpretation: workload or schedule equality, resource allocation, enabled features, timing boundaries, and validation criteria. Put them near the affected comparison or in an accessible methods passage. A footnote can carry a concise condition; an appendix cannot repair a misleading headline claim.
 
+When comparing incremental feature costs across implementations, compare each implementation's feature-enabled/feature-disabled cost multiplier on matched workloads where both support the feature. Medians over different workload sets are separate summaries, not a matched comparison. Present capabilities with no reference counterpart separately through their within-system costs. Keep these incremental comparisons distinct from direct performance comparisons between complete systems: a ratio of those multipliers describes relative feature cost, not overall speedup.
+
 Choose a metric and visualization only after stating its purpose. Supply absolute numerical context when ratios alone obscure practical cost, especially for short runs. Distinguish a plausible overhead explanation from a measured cause. Static program growth, runtime, and memory answer different questions. Per-pass arrows require actual consecutive intermediate programs from the same pipeline; separate configurations alone do not establish a transformation trajectory. When borrowing an admired paper's presentation, identify the rhetorical job and evidence it serves; do not mechanically copy its aggregation, cutoffs, or chart type, or infer why reviewers liked it.
 
 ## Route specialized work without duplicating it
