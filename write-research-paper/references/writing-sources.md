@@ -22,6 +22,16 @@ These guides are advice from individual authors, not a consensus specification. 
 
 These two originals are linked, not redistributed: no redistribution permission was inferred from public access. The existing guides' source and rights records remain in the optional [shared index](../../write-pl-related-work/references/sources.md#writing-and-how-to-guides).
 
+## Appendices and evaluation substantiation
+
+Inspected November 13, 2026. Recheck the live venue instructions for the submission's year and stage; the venue example below is not a permanent PL rule.
+
+| Source and locator | Source status and guidance | Adaptation and limit |
+| --- | --- | --- |
+| [PLDI 2027 CFP](https://pldi27.sigplan.org/track/pldi-2027-papers), “Formatting Requirements” and “Supplementary Material, Mechanized Proofs, and AI Use” | Venue policy: appendices are supplementary and excluded from the text-page limit; reviewers may consult supplements but need not. Proof scripts supporting a main mechanized contribution accompany the submission. | Make the main argument interpretable without requiring supplementary reading. Preserve required proof delivery separately from editorial decisions about explanatory appendix length. This CFP sets no appendix-length target. |
+| [SIGPLAN Empirical Evaluation Guidelines](https://www.sigplan.org/Resources/EmpiricalEvaluation/), checklist introduction and FAQ on limitations, benchmark choice, and artifact evaluation | Committee guidance: use evidence appropriate to the claim, expose material limitations, and justify benchmark selection. The checklist supports expert judgment; its examples are not universally applicable. Artifact evaluation checks the paper's claims and evidence against the artifact. | Preserve interpretation-critical experimental conditions while contracting methods. Moving commands and raw logs into the artifact does not replace a comprehensible protocol in the paper. These are methodological recommendations, not a mandatory section template. |
+| [Widom, “Appendices”](https://cs.stanford.edu/people/widom/paper-writing.html#appendices) | Individual writing advice: keep the contribution understandable in the main paper and offer detailed substantiation for selective reading. Widom specifically recommends proofs and algorithms. | Apply the reader-access principle; do not adopt the proofs-and-algorithms-only restriction for venues that also permit experimental supplements. Neither the source nor this adaptation supplies a deletion quota. |
+
 ## Selected observed paper patterns
 
 These are observations of the cited versions, not writing rules their authors state.
